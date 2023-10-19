@@ -1,0 +1,1 @@
+export * as getAllRoudns from './getAllRounds';

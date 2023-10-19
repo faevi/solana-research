@@ -13,4 +13,10 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod fungible_token_price {
     use super::*;
+
+    pub fn test_instruction<'a, 'b, 'c, 'info>(
+        ctx: Context<'a, 'b, 'c, 'info, TestInstruction<'info>>,
+    ) -> Result<()> {
+        instructions::test_instruction::handler(ctx)
+    }
 }
